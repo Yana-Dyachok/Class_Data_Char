@@ -1,7 +1,6 @@
 #include "Data.h"
 #include <string>
 #include <iostream>
-#include <ctime>
 using namespace std;
 Data::Data() {
 	char arr[3]{ '0','1' }; char array[5]{ '1','9','0','0' };
@@ -68,7 +67,7 @@ Data::Data(const Data& d, const Data& m, const Data& y) {
 }
 
 
-void Data::setDay(const char* a) {// ìåòîä, ÿêèé çì³íþº çíà÷åííÿ äàòè êëàñó;
+void Data::setDay(const char* a) {// Ã¬Ã¥Ã²Ã®Ã¤, Ã¿ÃªÃ¨Ã© Ã§Ã¬Â³Ã­Ã¾Âº Ã§Ã­Ã Ã·Ã¥Ã­Ã­Ã¿ Ã¤Ã Ã²Ã¨ ÃªÃ«Ã Ã±Ã³;
 	delete[]this->day;
 	this->day = new char[3];
 	for (int i = 0; i < 2; i++)
@@ -79,7 +78,7 @@ void Data::setDay(const char* a) {// ìåòîä, ÿêèé çì³íþº çíà÷åííÿ äàòè êëàñó;
 }
 
 
-void Data::setMonth(const char* a) {// ìåòîä, ÿêèé çì³íþº çíà÷åííÿ ì³ñÿöÿ;
+void Data::setMonth(const char* a) {// Ã¬Ã¥Ã²Ã®Ã¤, Ã¿ÃªÃ¨Ã© Ã§Ã¬Â³Ã­Ã¾Âº Ã§Ã­Ã Ã·Ã¥Ã­Ã­Ã¿ Ã¬Â³Ã±Ã¿Ã¶Ã¿;
 	delete[]this->month;
 	this->month = new char[3];
 	for (int i = 0; i < 2; i++)
@@ -90,7 +89,7 @@ void Data::setMonth(const char* a) {// ìåòîä, ÿêèé çì³íþº çíà÷åííÿ ì³ñÿöÿ;
 }
 
 
-void Data::setYear(const char* a) {// ìåòîä, ÿêèé çì³íþº çíà÷åííÿ ðîêó êëàñó;
+void Data::setYear(const char* a) {// Ã¬Ã¥Ã²Ã®Ã¤, Ã¿ÃªÃ¨Ã© Ã§Ã¬Â³Ã­Ã¾Âº Ã§Ã­Ã Ã·Ã¥Ã­Ã­Ã¿ Ã°Ã®ÃªÃ³ ÃªÃ«Ã Ã±Ã³;
 	delete[]this->year;
 	this->year = new char[5];
 	for (int i = 0; i < 4; i++)
@@ -101,7 +100,7 @@ void Data::setYear(const char* a) {// ìåòîä, ÿêèé çì³íþº çíà÷åííÿ ðîêó êëàñó;
 }
 
 
-bool Data::verifikation() {//  ìåòîä, ÿêèé ïåðåâ³ðÿº êîðåêòí³ñòü äàòè ³ ïîâåðòàº(true / false) â³äïîâ³äíî(ïðàâèëüíà / íåïðàâèëüíà).² ÿêùî äàòà íå ïðàâèëüíà íàäàº çíà÷åííÿ 01.01.1900;
+bool Data::verifikation() {//  Ã¬Ã¥Ã²Ã®Ã¤, Ã¿ÃªÃ¨Ã© Ã¯Ã¥Ã°Ã¥Ã¢Â³Ã°Ã¿Âº ÃªÃ®Ã°Ã¥ÃªÃ²Ã­Â³Ã±Ã²Ã¼ Ã¤Ã Ã²Ã¨ Â³ Ã¯Ã®Ã¢Ã¥Ã°Ã²Ã Âº(true / false) Ã¢Â³Ã¤Ã¯Ã®Ã¢Â³Ã¤Ã­Ã®(Ã¯Ã°Ã Ã¢Ã¨Ã«Ã¼Ã­Ã  / Ã­Ã¥Ã¯Ã°Ã Ã¢Ã¨Ã«Ã¼Ã­Ã ).Â² Ã¿ÃªÃ¹Ã® Ã¤Ã Ã²Ã  Ã­Ã¥ Ã¯Ã°Ã Ã¢Ã¨Ã«Ã¼Ã­Ã  Ã­Ã Ã¤Ã Âº Ã§Ã­Ã Ã·Ã¥Ã­Ã­Ã¿ 01.01.1900;
 string MonthNumb[] = { "01","02","03","04","05","06","07","08","09","10","11","12" };
 string check; bool find=false, find1 = false, find2 = false;
 	for (int i = 0; i < 13; i++) {
@@ -145,7 +144,7 @@ void Data::check() {
 }
 
 
-void Data::OutDataddmmyy() {// ìåòîä âèâîäèòü äàòó ó ôîðìàò³ ää.ìì.ðð, íàïðèêëàä 02.03.19;
+void Data::OutDataddmmyy() {// Ã¬Ã¥Ã²Ã®Ã¤ Ã¢Ã¨Ã¢Ã®Ã¤Ã¨Ã²Ã¼ Ã¤Ã Ã²Ã³ Ã³ Ã´Ã®Ã°Ã¬Ã Ã²Â³ Ã¤Ã¤.Ã¬Ã¬.Ã°Ã°, Ã­Ã Ã¯Ã°Ã¨ÃªÃ«Ã Ã¤ 02.03.19;
 	check();
 	string year;
 	for (int i = 2; i <5; i++)
@@ -157,13 +156,13 @@ void Data::OutDataddmmyy() {// ìåòîä âèâîäèòü äàòó ó ôîðìàò³ ää.ìì.ðð, íàïðèêëàä
 }
 
 
-void Data::OutDataddmmyyyy() {// ìåòîä âèâîäèòü äàòó ó ôîðìàò³ ää.ìì.ðððð, íàïðèêëàä 02.03.2019;
+void Data::OutDataddmmyyyy() {// Ã¬Ã¥Ã²Ã®Ã¤ Ã¢Ã¨Ã¢Ã®Ã¤Ã¨Ã²Ã¼ Ã¤Ã Ã²Ã³ Ã³ Ã´Ã®Ã°Ã¬Ã Ã²Â³ Ã¤Ã¤.Ã¬Ã¬.Ã°Ã°Ã°Ã°, Ã­Ã Ã¯Ã°Ã¨ÃªÃ«Ã Ã¤ 02.03.2019;
 	check();
 	std::cout << this->day << "." << this->month << "." << this->year << std::endl;
 }
 
 
-void Data::OutDataddMonthyyyy() {// ìåòîä âèâîäèòü äàòó ó ôîðìàò³ ää ì³ñÿöü ðððð, íàïðèêëàä 02 March 2019.
+void Data::OutDataddMonthyyyy() {// Ã¬Ã¥Ã²Ã®Ã¤ Ã¢Ã¨Ã¢Ã®Ã¤Ã¨Ã²Ã¼ Ã¤Ã Ã²Ã³ Ã³ Ã´Ã®Ã°Ã¬Ã Ã²Â³ Ã¤Ã¤ Ã¬Â³Ã±Ã¿Ã¶Ã¼ Ã°Ã°Ã°Ã°, Ã­Ã Ã¯Ã°Ã¨ÃªÃ«Ã Ã¤ 02 March 2019.
 	check();
 	int k = 0;
 	std::cout << this->day << ' '; 
